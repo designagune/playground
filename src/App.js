@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef } from "react";
+import CreateMember from "./CreateMember";
+import Member from "./Member";
 
 function App() {
+  const memberData = [
+    {
+      id: 1,
+      name: "채동건",
+      katalk: "건이",
+    },
+    {
+      id: 2,
+      name: "김영우",
+      katalk: "♻️",
+    },
+    {
+      id: 3,
+      name: "유항진",
+      katalk: "항따리",
+    },
+    {
+      id: 4,
+      name: "정세리",
+      katalk: "SeRi",
+    },
+  ];
+
+  const onChange = (event) => {};
+
+  const nextId = useRef(5);
+
+  const onCreate = () => {
+    nextId.current += 1;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Member memberData={memberData} />
+      <CreateMember onChange={onChange} onCreate={onCreate} />
+    </>
   );
 }
 

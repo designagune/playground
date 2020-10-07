@@ -1,4 +1,4 @@
-import { dbService } from "fbInstance";
+import { dbService, storageService } from "fbInstance";
 import React, { useState } from "react";
 
 const Dweet = ({ dweetObj, isOwner }) => {
@@ -6,9 +6,9 @@ const Dweet = ({ dweetObj, isOwner }) => {
   const [newDweet, setNewDweet] = useState(dweetObj.text);
   const onDelete = async () => {
     const yesOrNo = window.confirm("정말 삭제하시겠습니까?");
-    console.log(yesOrNo);
     if (yesOrNo) {
       await dbService.doc(`dweets/${dweetObj.id}`).delete();
+      await storageService.refFromURL(dweetObj.attachmentUrl).delete();
     }
   };
 
@@ -19,15 +19,15 @@ const Dweet = ({ dweetObj, isOwner }) => {
       text: newDweet,
     });
     setEdit(false);
-    console.clear();
-    console.warn("Don't let this happen again.");
   };
+
   const onChange = (event) => {
     const {
       target: { value },
     } = event;
     setNewDweet(value);
   };
+
   return (
     <div>
       {edit ? (
@@ -47,6 +47,14 @@ const Dweet = ({ dweetObj, isOwner }) => {
       ) : (
         <>
           <p>{dweetObj.text}</p>
+          {dweetObj.attachmentUrl && (
+            <img
+              src={dweetObj.attachmentUrl}
+              alt="dweetImg"
+              width="50px"
+              height="50px"
+            />
+          )}
           {isOwner && (
             <>
               <button onClick={onDelete}>Delete Dweet</button>

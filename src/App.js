@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import CreateMember from "./CreateMember";
 import Member from "./Member";
+import PlusMinus from "./component/PlusMinus";
 
 function App() {
   const memberData = [
@@ -38,6 +39,10 @@ function App() {
     <>
       <Member memberData={memberData} />
       <CreateMember onChange={onChange} onCreate={onCreate} />
+      <hr />
+      <div>
+        <PlusMinus placeholder="입력해보시든지" />
+      </div>
     </>
   );
 }

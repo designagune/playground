@@ -4,7 +4,7 @@ const CreateMember = ({ memberName, katalk, onChange, onCreate }) => {
   return (
     <div>
       <input
-        name="membername"
+        name="memberName"
         placeholder="이름"
         onChange={onChange}
         value={memberName}

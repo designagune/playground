@@ -4,6 +4,9 @@ import Member from "./Member";
 import PlusMinus from "./component/PlusMinus";
 import AxiosFilter from "./component/AxiosFilter";
 import { useEffect } from "react";
+import { Route, Link, useLocation } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
 
 function App() {
   const [mentee,setMentee] = useState({
@@ -81,7 +84,9 @@ function App() {
       )
     );
   }
+////////////////////
 
+  const alertLocation = (loc) => alert(loc);
   return (
     <>
       <Member memberData={memberData} onRemove={onRemove} onStatus={onStatus}/>
@@ -90,6 +95,17 @@ function App() {
       <div>
         <AxiosFilter />
       </div> */}
+      <div>
+        <ul>
+          <li><Link to="/">홈</Link></li>
+          <li><Link to="/about">소개</Link></li>
+        </ul>
+        <Route path="/" exact component={Home} />
+        <Route 
+          path="/about" 
+          render={ ()=> <About locationData={alertLocation} /> }
+        />
+      </div>
     </>
   );
 }

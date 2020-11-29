@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> test </title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    </head>
+    <body>
+        <div id="root" >화면에보일부분</div>
+        <script type="text/babel">
+        //값처리
+        //jsx
+
+        const link = "https://www.naver.com";
+        const title = "네이버로 이동하시든가";
+        const msg = "네이버";
+        const el = (
+            <div>
+                <a href={link} title={title} target="_blank">{msg}</a>
+            </div>
+        );
+
+        const dom = document.querySelector("#root");
+       
+        ReactDOM.render(el, dom);
+        </script>
+    </body>
+</html>

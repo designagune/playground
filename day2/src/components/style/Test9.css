@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    paddin: 0;
+}
+.Test9 {
+    width: 700px;
+    padding: 0 20px;
+    margin: 20px auto;
+}
+
+.Test9 table {
+    width: 100%;
+}
+
+.Test9 table .no {
+    width: 70px;
+}
+
+.Test9 table .name {
+    width: 150px;
+}
+
+.Test9 table .age {
+    width: 100px;
+}
+
+.Test9 table .addr {
+}
+
+.Test9 table .done {
+    width: 150px;
+}
+
+.Test9 table th,
+.Test9 table td {
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+}
+
+.Test9 table thead tr th {
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+}
+
+.Test9 table tbody tr td {
+    transition: 0.3s;
+}
+
+.Test9 table tbody tr:hover td {
+    background: limegreen;
+}

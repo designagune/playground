@@ -1,0 +1,11 @@
+.melonForm {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.melonForm input {
+    width: 70%;
+    height: 45px;
+    border: 1px solid #dcdcdc;
+    padding: 3px 25px;
+}

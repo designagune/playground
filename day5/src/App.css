@@ -1,0 +1,11 @@
+*{margin:0; padding:0}
+li{list-style: none;}
+.App {margin-left: 20px;}
+.App nav {margin-bottom:30px; margin-top:50px; border-bottom:2px solid #333; padding-bottom:20px ; width:700px}
+.App nav ul { display: flex ; flex-direction: row; flex-wrap: wrap;}
+.App nav ul li {margin-right:20px; list-style:none; width: 70px; line-height: 30px; text-align: center;border: 1px solid #000; margin-bottom: 10px;}
+.App nav ul li a {text-decoration: none; color:#333}
+.App h4 { margin-bottom: 20px;}
+p {margin-bottom: 10px;}
+h2 { font-size: 30px; margin-bottom: 20px; margin-top: 20px;}
+button { margin-right: 5px;}

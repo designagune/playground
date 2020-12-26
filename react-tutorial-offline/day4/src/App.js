@@ -1,0 +1,15 @@
+import React, { Component } from "react";
+import Test8 from "./components/Test8";
+import "./App.css";
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Test8 />
+            </div>
+        );
+    }
+}
+
+export default App;

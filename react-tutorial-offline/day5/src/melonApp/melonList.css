@@ -1,0 +1,60 @@
+.melonList {
+    padding-bottom: 50px;
+}
+.melonList table {
+}
+.melonList .w1 {
+    width: 7%;
+}
+.melonList .w2 {
+}
+.melonList .w3 {
+    width: 18%;
+}
+.melonList .w4 {
+    width: 15%;
+}
+.melonList .w5 {
+    width: 10%;
+}
+.melonList .w6 {
+    width: 15%;
+}
+.melonList th,
+.melonList td {
+    border-bottom: 1px solid #dcdcdc;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+}
+.melonList thead {
+}
+.melonList thead tr {
+    border-top: 1px solid #000;
+    height: 50px;
+}
+.melonList thead th {
+}
+.melonList tbody {
+}
+.melonList tbody tr {
+}
+.melonList tbody td {
+    padding: 5px;
+}
+.melonList tbody td:nth-child(2) {
+    text-align: left;
+}
+.melonList tbody td:nth-child(3) {
+    text-align: left;
+}
+.melonList tbody tr:last-child td {
+    border-bottom: 1px solid #000;
+}
+.melonList tbody tr td img {
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.melonList tbody tr td i {
+    font-size: 25px;
+}

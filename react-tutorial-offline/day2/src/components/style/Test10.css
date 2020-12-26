@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.test10 {
+    width: 1000px;
+    margin: 30px auto;
+}
+
+.test10 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.test10 ul li {
+    padding-bottom: 20px;
+    flex-basis: 25%;
+}
+
+.test10 img {
+    width: 100%;
+    height: 360px;
+}
+
+.test10 h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.test10 p {
+    font-size: 14px;
+}
